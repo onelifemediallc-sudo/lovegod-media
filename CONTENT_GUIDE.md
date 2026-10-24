@@ -30,7 +30,7 @@ This is the rulebook for the daily posting run. Follow it exactly.
 - Show today's count and the running total at the top of every preview.
 - At **900+** total, flag it clearly at the top of the preview so Dustin can decide (ask Lockman, reuse posted verses, or switch new verses to KJV/WEB). At 1,000, stop adding new NASB verses until he decides.
 
-## Daily mix (8 posts/day for the first 2 weeks, from Oct 25, 2026; Eastern time)
+## Daily mix at 8 posts/day (Oct 25 – Nov 7, 2026; Eastern time)
 | Time | Type |
 |---|---|
 | 6:00 AM | Verse graphic |
@@ -42,7 +42,18 @@ This is the rulebook for the daily posting run. Follow it exactly.
 | 8:00 PM | **Night reel** — peaceful / rest / trust verse, calm music |
 | 9:00 PM | Humor or relatable church-life graphic (kind, never mocking) |
 
-- After 2 weeks (around Nov 8), suggest to Dustin whether to increase based on reach per post.
+## Volume ramp (Dustin's decision: 20 posts/day by day 30, regardless)
+| Posting date | Posts/day | Reels | Verse graphics | Text | Engagement | Humor | Prayer prompt |
+|---|---|---|---|---|---|---|---|
+| Oct 25 – Nov 7 | 8 | 2 | 3 | 1 | 1 | 1 | 0 |
+| Nov 8 – Nov 14 | 12 | 2 | 4 | 2 | 2 | 1 | 1 |
+| Nov 15 – Nov 21 | 16 | 3 | 5 | 3 | 2 | 2 | 1 |
+| Nov 22 onward | 20 | 3 | 6 | 4 | 3 | 2 | 2 |
+
+- Use the row for the date being scheduled. For 8/day use the exact times in the table above. For 12+/day, spread posts roughly every hour from 6:00 AM to 11:00 PM: reels morning (about 7 AM), afternoon (about 1 PM, when there are 3) and night (about 8 PM); don't put two verse graphics back to back; keep humor in the evening.
+- Prayer prompt = a graphic or text post inviting people to share prayer requests or pray for something specific (no verse needed).
+- Keep about half of each day non-verse to avoid repetitive, mass-produced patterns and to slow the NASB verse count. Reusing popular verses already in verse-log.csv (with a new caption and design wording) adds 0 to the count; do this regularly at 16–20 posts/day.
+- Each week, include a one-line reach/engagement trend in the preview message (Metricool analytics), so Dustin can see how the ramp is landing.
 - Goal right now: reach new people who want faith content. Reels for discovery; captions built to be shared ("Share this with someone who…", "Tag a friend who…").
 
 ## Reels
@@ -58,7 +69,7 @@ This is the rulebook for the daily posting run. Follow it exactly.
 
 ## Daily workflow (scheduled run at 8:00 AM Eastern)
 1. Read this guide and `verse-log.csv`.
-2. Plan tomorrow's 8 posts; look up each verse's NASB 1995 wording.
+2. Plan tomorrow's posts using the Volume ramp row for that date; look up each verse's NASB 1995 wording.
 3. Make the graphics with `tools/brand.py` and the two reels with `tools/reel.py`; save to `media/YYYY-MM-DD/` (tomorrow's date), e.g. `media/2026-10-26/p1.png`, `r1.mp4`.
 4. Commit and push to `main`. Image links: `https://raw.githubusercontent.com/onelifemediallc-sudo/lovegod-media/main/media/YYYY-MM-DD/pN.png`. Check each link returns 200 before scheduling.
 5. Schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true) for tomorrow at its time.
