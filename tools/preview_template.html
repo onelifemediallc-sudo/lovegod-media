@@ -1,0 +1,134 @@
+<title>Love God. Daily Preview</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Poppins:wght@400;500;600&display=swap">
+<style>
+/* Layout: a single feed-like column, one card per scheduled post in time order, like scrolling the page itself */
+:root {
+  --teal: #51B5A9;
+  --teal-deep: #2E7F76;
+  --yellow: #F8E34C;
+  --bg: #EEF5F4;
+  --card: #FFFFFF;
+  --fg: #1C2B29;
+  --muted: #5B6E6B;
+  --line: #D6E5E2;
+  --display: "Lora", Georgia, serif;
+  --body: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --bg: #0F1D1B; --card: #162926; --fg: #E6F0EE; --muted: #9BB3AF; --line: #24403C; --teal-deep: #7FD3C8; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --bg: #0F1D1B; --card: #162926; --fg: #E6F0EE; --muted: #9BB3AF; --line: #24403C; --teal-deep: #7FD3C8; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; line-height: 1.55; }
+.band { background: var(--teal); }
+.wrap { max-width: 560px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.band .wrap { padding-block: 28px 24px; display: grid; gap: 4px; }
+.brand { font-family: var(--display); font-weight: 600; font-size: 34px; color: var(--yellow); margin: 0; line-height: 1.1; }
+.date { color: #fff; margin: 0; font-weight: 500; }
+main.wrap { padding-block: 20px 48px; display: grid; gap: 16px; }
+.summary { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 6px; font-size: 14px; }
+.summary b { font-weight: 600; }
+.summary .row { display: flex; flex-wrap: wrap; gap: 6px 16px; color: var(--muted); }
+.sample { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--teal-deep); font-weight: 600; }
+.post { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.post-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 16px; border-bottom: 1px solid var(--line); }
+.time { font-weight: 600; font-variant-numeric: tabular-nums; }
+.num { color: var(--muted); font-weight: 500; margin-right: 8px; }
+.kind { font-size: 12px; padding: 3px 10px; border-radius: 99px; background: var(--bg); color: var(--muted); white-space: nowrap; }
+.post img { display: block; width: 100%; height: auto; }
+.caption { padding: 14px 16px 16px; white-space: pre-line; min-width: 0; overflow-wrap: anywhere; }
+.reply { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px; display: grid; gap: 8px; }
+.reply h2 { font-family: var(--display); font-size: 19px; margin: 0; }
+.reply ul { margin: 0; padding-left: 18px; color: var(--muted); }
+</style>
+
+<header class="band">
+  <div class="wrap">
+    <p class="brand">Love God.</p>
+    <p class="date">Posts for Sunday, October 25</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="summary" aria-label="Day summary">
+    <span class="sample">Sample preview</span>
+    <div><b>6 posts</b> scheduled in Metricool, Eastern time</div>
+    <div class="row"><span>3 verse graphics</span><span>1 text post</span><span>1 engagement post</span><span>1 humor post</span></div>
+    <div class="row"><span>NASB verses used today: 4</span><span>Running total: 4 of 1,000</span></div>
+  </section>
+
+  <article class="post">
+    <div class="post-head"><span class="time"><span class="num">1</span>6:00 AM</span><span class="kind">Verse graphic</span></div>
+    <img src="p1.png" alt="Lamentations 3:22–23 in yellow on teal" width="1080" height="1080">
+    <p class="caption">Whatever yesterday held, His mercy met you again this morning. 🌅
+
+You don't have to earn it. You just have to receive it.
+
+Type AMEN if you're grateful for a new day.
+
+Scripture: NASB · Lockman.org</p>
+  </article>
+
+  <article class="post">
+    <div class="post-head"><span class="time"><span class="num">2</span>9:00 AM</span><span class="kind">Text post</span></div>
+    <p class="caption">Some Sundays you walk into church carrying the whole week on your shoulders.
+
+The argument. The bill. The worry you haven't told anyone about.
+
+You don't have to set it down perfectly. You just have to bring it to Him.
+
+Who are you praying for this morning? Drop their first name below and let's pray together. 🙏</p>
+  </article>
+
+  <article class="post">
+    <div class="post-head"><span class="time"><span class="num">3</span>12:00 PM</span><span class="kind">Verse graphic</span></div>
+    <img src="p3.png" alt="Matthew 22:37 in yellow on teal" width="1080" height="1080">
+    <p class="caption">Not part of your heart. Not what's left of your mind after a long week. All of it.
+
+Loving God this way doesn't happen by accident. It grows one surrendered day at a time.
+
+What's one way you show your love for God in everyday life? Share it below.
+
+Scripture: NASB · Lockman.org</p>
+  </article>
+
+  <article class="post">
+    <div class="post-head"><span class="time"><span class="num">4</span>3:00 PM</span><span class="kind">Engagement post</span></div>
+    <img src="p4.png" alt="Fill in the blank: God has been faithful to me in blank" width="1080" height="1080">
+    <p class="caption">Your story could be exactly what someone else needs to hear today. 💛
+
+Fill in the blank in the comments.</p>
+  </article>
+
+  <article class="post">
+    <div class="post-head"><span class="time"><span class="num">5</span>6:00 PM</span><span class="kind">Verse graphic</span></div>
+    <img src="p5.png" alt="Isaiah 41:10, first half, in yellow on teal" width="1080" height="1080">
+    <p class="caption">Tomorrow is Monday, and some of you already feel the weight of it.
+
+Before you look ahead at everything that could go wrong, look up at the One who said He would be with you.
+
+You are not walking into this week alone.
+
+Tag someone who needs this before Monday.
+
+Scripture: NASB · Lockman.org</p>
+  </article>
+
+  <article class="post">
+    <div class="post-head"><span class="time"><span class="num">6</span>9:00 PM</span><span class="kind">Humor post</span></div>
+    <img src="p6.png" alt="Joke about flipping through the Old Testament to find Obadiah" width="1080" height="1080">
+    <p class="caption">Be honest… how long does it take you to find Obadiah? 😅
+
+Bonus points if you can do it without the table of contents.</p>
+  </article>
+
+  <section class="reply">
+    <h2>How to respond</h2>
+    <ul>
+      <li>Do nothing, and these post tomorrow as shown.</li>
+      <li>Ask for changes, like "redo post 4" or "make the 6 PM caption shorter."</li>
+      <li>Say "cancel tomorrow" to remove the whole day.</li>
+    </ul>
+  </section>
+</main>
