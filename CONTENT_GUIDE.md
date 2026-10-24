@@ -31,16 +31,20 @@ This is the rulebook for the daily posting run. Follow it exactly.
 - At **900+** total, flag it clearly at the top of the preview so Dustin can decide (ask Lockman, reuse posted verses, or switch new verses to KJV/WEB). At 1,000, stop adding new NASB verses until he decides.
 
 ## Daily mix at 8 posts/day (Oct 25 – Nov 7, 2026; Eastern time)
+Times are based on Metricool's best-time data for the Page (peaks around 10 AM–12 PM and 4–6 PM; weakest before 7 AM and after 9 PM).
 | Time | Type |
 |---|---|
-| 6:00 AM | Verse graphic |
-| 7:00 AM | **Morning reel** — "start your day" verse, upbeat music |
-| 9:00 AM | Text post (no image) — short reflection ending in a question or prompt |
+| 8:00 AM | Verse graphic |
+| 10:00 AM | **Morning reel** — "start your day" verse, upbeat music |
+| 11:00 AM | Text post (no image) — short reflection ending in a question or prompt |
 | 12:00 PM | Verse graphic |
 | 3:00 PM | Engagement graphic (fill in the blank, "Type AMEN if…", this-or-that) |
-| 6:00 PM | Verse graphic |
+| 5:00 PM | Verse graphic |
+| 6:00 PM | Humor or relatable church-life graphic (kind, never mocking) |
 | 8:00 PM | **Night reel** — peaceful / rest / trust verse, calm music |
-| 9:00 PM | Humor or relatable church-life graphic (kind, never mocking) |
+
+- Goal right now: reach new people who want faith content. Reels for discovery; captions built to be shared ("Share this with someone who…", "Tag a friend who…").
+- Once a week (Sundays), check Metricool's getBestTimeToPostByNetwork (facebook, America/New_York) and the Page's post analytics. If the best hours have clearly shifted, adjust the times and tell Dustin.
 
 ## Volume ramp (Dustin's decision: 20 posts/day by day 30, regardless)
 | Posting date | Posts/day | Reels | Verse graphics | Text | Engagement | Humor | Prayer prompt |
@@ -50,7 +54,7 @@ This is the rulebook for the daily posting run. Follow it exactly.
 | Nov 15 – Nov 21 | 16 | 3 | 5 | 3 | 2 | 2 | 1 |
 | Nov 22 onward | 20 | 3 | 6 | 4 | 3 | 2 | 2 |
 
-- Use the row for the date being scheduled. For 8/day use the exact times in the table above. For 12+/day, spread posts roughly every hour from 6:00 AM to 11:00 PM: reels morning (about 7 AM), afternoon (about 1 PM, when there are 3) and night (about 8 PM); don't put two verse graphics back to back; keep humor in the evening.
+- Use the row for the date being scheduled. For 8/day use the exact times in the table above. For 12+/day, spread posts between 7:00 AM and 10:00 PM, putting more of them in the peak windows (about 9 AM–1 PM and 3–7 PM) and fewer early or late; reels around 10 AM, 1 PM (when there are 3) and 8 PM; don't put two verse graphics back to back; keep humor in the evening.
 - Prayer prompt = a graphic or text post inviting people to share prayer requests or pray for something specific (no verse needed).
 - Keep about half of each day non-verse to avoid repetitive, mass-produced patterns and to slow the NASB verse count. Reusing popular verses already in verse-log.csv (with a new caption and design wording) adds 0 to the count; do this regularly at 16–20 posts/day.
 - Each week, include a one-line reach/engagement trend in the preview message (Metricool analytics), so Dustin can see how the ramp is landing.
