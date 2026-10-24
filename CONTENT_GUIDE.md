@@ -46,15 +46,19 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AM�
 - Goal right now: reach new people who want faith content. Reels for discovery; captions built to be shared ("Share this with someone who…", "Tag a friend who…").
 - Once a week (Sundays), check Metricool's getBestTimeToPostByNetwork (facebook, America/New_York) and the Page's post analytics. If the best hours have clearly shifted, adjust the times and tell Dustin.
 
-## Volume ramp (Dustin's decision: 20 posts/day by day 30, regardless)
-| Posting date | Posts/day | Reels | Verse graphics | Text | Engagement | Humor | Prayer prompt |
-|---|---|---|---|---|---|---|---|
-| Oct 25 – Nov 7 | 8 | 2 | 3 | 1 | 1 | 1 | 0 |
-| Nov 8 – Nov 14 | 12 | 2 | 4 | 2 | 2 | 1 | 1 |
-| Nov 15 – Nov 21 | 16 | 3 | 5 | 3 | 2 | 2 | 1 |
-| Nov 22 onward | 20 | 3 | 6 | 4 | 3 | 2 | 2 |
+## Volume plan (Dustin's decision, Oct 24, 2026)
+- **8 posts/day for the first 30 days: Oct 25 – Nov 23, 2026.** Use the 8-post schedule above. Do not increase volume on your own.
+- **Nov 23 run: 30-day evaluation.** In that morning's preview message, include a short 30-day report from Metricool analytics and the Professional Dashboard if available: total reach/views, followers gained, best and worst post types, best times, and earnings if visible. Then recommend whether to move toward 20 posts/day. Dustin decides; keep 8/day until he says otherwise.
+- Dustin's goal: eventually 20 posts/day, earning $20–$40/day at first, with $100/day as the long-term target. The test window is 60 days.
+- If Dustin approves more posts, use this mix as a guide:
 
-- Use the row for the date being scheduled. For 8/day use the exact times in the table above. For 12+/day, spread posts between 7:00 AM and 10:00 PM, putting more of them in the peak windows (about 9 AM–1 PM and 3–7 PM) and fewer early or late; reels around 10 AM, 1 PM (when there are 3) and 8 PM; don't put two verse graphics back to back; keep humor in the evening.
+| Posts/day | Reels | Verse graphics | Text | Engagement | Humor | Prayer prompt |
+|---|---|---|---|---|---|---|
+| 12 | 2 | 4 | 2 | 2 | 1 | 1 |
+| 16 | 3 | 5 | 3 | 2 | 2 | 1 |
+| 20 | 3 | 6 | 4 | 3 | 2 | 2 |
+
+- For 8/day use the exact times in the 8-post table. For 12+/day (only after Dustin approves), spread posts between 7:00 AM and 10:00 PM, putting more of them in the peak windows (about 9 AM–1 PM and 3–7 PM) and fewer early or late; reels around 10 AM, 1 PM (when there are 3) and 8 PM; don't put two verse graphics back to back; keep humor in the evening.
 - Prayer prompt = a graphic or text post inviting people to share prayer requests or pray for something specific (no verse needed).
 - Keep about half of each day non-verse to avoid repetitive, mass-produced patterns and to slow the NASB verse count. Reusing popular verses already in verse-log.csv (with a new caption and design wording) adds 0 to the count; do this regularly at 16–20 posts/day.
 - Each week, include a one-line reach/engagement trend in the preview message (Metricool analytics), so Dustin can see how the ramp is landing.
@@ -73,7 +77,7 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AM�
 
 ## Daily workflow (scheduled run at 8:00 AM Eastern)
 1. Read this guide and `verse-log.csv`.
-2. Plan tomorrow's posts using the Volume ramp row for that date; look up each verse's NASB 1995 wording.
+2. Plan tomorrow's posts using the Volume plan (8/day unless Dustin has approved more); look up each verse's NASB 1995 wording.
 3. Make the graphics with `tools/brand.py` and the two reels with `tools/reel.py`; save to `media/YYYY-MM-DD/` (tomorrow's date), e.g. `media/2026-10-26/p1.png`, `r1.mp4`.
 4. Commit and push to `main`. Image links: `https://raw.githubusercontent.com/onelifemediallc-sudo/lovegod-media/main/media/YYYY-MM-DD/pN.png`. Check each link returns 200 before scheduling.
 5. Schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true) for tomorrow at its time.
