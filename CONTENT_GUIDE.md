@@ -65,3 +65,8 @@ This is the rulebook for the daily posting run. Follow it exactly.
 6. Append the day's verses to `verse-log.csv`, commit and push.
 7. Publish the preview page (based on `tools/preview_template.html`) showing every post in time order with graphic, caption, time, today's verse count and running total, and send it to Dustin.
 8. Posts go out automatically. If Dustin asks for changes during the day, update or delete those posts in Metricool (and the graphic/log) and confirm.
+
+## Dustin's own reels
+- Dustin will sometimes record reels of himself (a verse thought, a prayer, a testimony). These are the page's most valuable content.
+- If he sends one for a given day, write the caption, schedule it, and use it in place of that day's automated reel (morning or night, whichever fits) instead of adding an extra reel. Mark it "Dustin's reel" in the preview.
+- If he posts one himself directly on Facebook, keep the automated schedule as is.
