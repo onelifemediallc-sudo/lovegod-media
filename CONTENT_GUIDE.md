@@ -75,15 +75,22 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AM�
 - Every post should invite engagement (comment, share, tag, type a word).
 - No made-up statistics, no fake engagement numbers on graphics, no real people's names.
 
-## Daily workflow (scheduled run at 8:00 AM Eastern)
+## Approval rule (Dustin's decision, Oct 26, 2026)
+- **Nothing goes to Metricool until Dustin confirms.** Each run builds tomorrow's posts and a preview, then waits for his reply.
+- Approval = a clear OK such as "post it", "approved" or "fine to post". Then schedule all posts and log the verses.
+- Changes requested → redo them, republish the preview, and ask again. "Cancel tomorrow" → schedule nothing.
+- No reply → nothing posts that day, and those verses are not logged.
+- Reading Metricool analytics (Sunday trend, best times, Nov 23 report) is fine without approval.
+
+## Daily workflow (scheduled run at about 7:45 AM Eastern)
 1. Read this guide and `verse-log.csv`.
 2. Plan tomorrow's posts using the Volume plan (8/day unless Dustin has approved more); look up each verse's NASB 1995 wording.
-3. Make the graphics with `tools/brand.py` and the two reels with `tools/reel.py`; save to `media/YYYY-MM-DD/` (tomorrow's date), e.g. `media/2026-10-26/p1.png`, `r1.mp4`.
-4. Commit and push to `main`. Image links: `https://raw.githubusercontent.com/onelifemediallc-sudo/lovegod-media/main/media/YYYY-MM-DD/pN.png`. Check each link returns 200 before scheduling.
-5. Schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true) for tomorrow at its time.
-6. Append the day's verses to `verse-log.csv`, commit and push.
-7. Publish the preview page (based on `tools/preview_template.html`) showing every post in time order with graphic, caption, time, today's verse count and running total, and send it to Dustin.
-8. Posts go out automatically. If Dustin asks for changes during the day, update or delete those posts in Metricool (and the graphic/log) and confirm.
+3. Make the graphics with `tools/brand.py` and the two reels with `tools/reel.py`; save to `media/YYYY-MM-DD/` (tomorrow's date), e.g. `media/2026-10-26/p1.png`, `r1.mp4`, plus `r1.jpg`/`r2.jpg` poster frames.
+4. Commit and push to `main`. Image links: `https://raw.githubusercontent.com/onelifemediallc-sudo/lovegod-media/main/media/YYYY-MM-DD/pN.png`. Check each link returns 200.
+5. Publish the preview page (based on `tools/preview_template.html`) marked "Not scheduled yet: waiting for your OK", showing every post in time order with graphic, caption, time, tomorrow's verse count and the running total including tomorrow. Notify Dustin that it's ready and won't post until he confirms.
+6. **Wait for Dustin's approval.** Do not schedule anything before it.
+7. After approval: schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true; reels as `REEL` with the poster as `videoThumbnailUrl`) for tomorrow at its time. Then append the day's verses to `verse-log.csv`, commit and push, and confirm to Dustin.
+8. If Dustin asks for changes after scheduling, update or delete those posts in Metricool (and the graphic/log) and confirm.
 
 ## Dustin's own reels
 - Dustin will sometimes record reels of himself (a verse thought, a prayer, a testimony). These are the page's most valuable content.
