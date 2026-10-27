@@ -1,10 +1,11 @@
-"""Love God. reel maker: 1080x1920, teal bg, yellow Lora verse scenes, white reference + NASB notice."""
+"""Love God. reel maker: 1080x1920, teal bg, yellow Lora verse scenes, white reference + scripture notice (KJV by default; NOTICE = the old NASB line)."""
 import os, subprocess, sys
 from PIL import Image, ImageDraw, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__)); FD = os.path.join(HERE, "..", "fonts") + "/"
 BG = (0x51, 0xB5, 0xA9); Y = (0xF8, 0xE3, 0x4C); WH = (255, 255, 255)
 NOTICE = ("Scripture quotations taken from the NASB (New American Standard Bible), Copyright © 1995 by "
           "The Lockman Foundation. Used by permission. All rights reserved. lockman.org")
+KJV_NOTICE = "Scripture: King James Version (KJV)"
 def lora(s):
     f = ImageFont.truetype(FD + "Lora-Variable.ttf", s); f.set_variation_by_axes([600]); return f
 def wrap(d, text, f, maxw):
@@ -17,7 +18,7 @@ def wrap(d, text, f, maxw):
             else: out.append(cur); cur = w
         out.append(cur)
     return out
-def make(scenes, ref, music, out, secs=15, fps=30):
+def make(scenes, ref, music, out, secs=15, fps=30, notice=KJV_NOTICE):
     """scenes: list of (start, end, text)."""
     W, H = 1080, 1920
     fr = ImageFont.truetype(FD + "Poppins-Medium.ttf", 40); fn = ImageFont.truetype(FD + "Poppins-Medium.ttf", 22)
@@ -40,7 +41,7 @@ def make(scenes, ref, music, out, secs=15, fps=30):
         d.rectangle((W / 2 - 60, 1290, W / 2 + 60, 1294), fill=WH)
         d.text((W / 2, 1320), ref, font=fr, fill=WH, anchor="ma")
         d.text((W / 2, 1480), "Love God.", font=sig, fill=Y, anchor="ma")
-        for i, l in enumerate(wrap(d, NOTICE, fn, 900)): d.text((W / 2, 1720 + i * 30), l, font=fn, fill=WH, anchor="ma")
+        for i, l in enumerate(wrap(d, notice, fn, 900)): d.text((W / 2, 1720 + i * 30), l, font=fn, fill=WH, anchor="ma")
         p.stdin.write(im.tobytes())
     p.stdin.close(); p.wait()
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", tmp, "-i", music, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac",

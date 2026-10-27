@@ -12,23 +12,23 @@ This is the rulebook for the daily posting run. Follow it exactly.
 - Size: 1080 x 1080 PNG.
 - Background: solid teal `#51B5A9`. No gradient, no vignette, no pictures.
 - Main text: yellow `#F8E34C`, font **Lora** (weight 600). No drop shadow, no outline.
-- Verse reference: white `#FFFFFF`, Poppins Medium, all caps, under a short white line. Example: `ISAIAH 41:10a (NASB)`.
+- Verse reference: white `#FFFFFF`, Poppins Medium, all caps, under a short white line. Example: `ISAIAH 41:10a (KJV)`.
 - Signature: "Love God." in yellow Lora at the bottom center.
 - Use `tools/brand.py` → `card(lines, out, ref=..., size=...)`. Keep at least ~90px side margins; shrink `size` for long verses.
 
-## Bible version: NASB 1995 only
-- Never quote from memory. Look up every verse's exact NASB 1995 wording online (for example biblehub.com/<book>/<ch>-<v>.htm, the "NASB 1995" line) before using it.
-- Normal capitalization is fine where the NASB prints Old Testament quotes in caps.
+## Bible version: King James Version (KJV) from Oct 29, 2026 (Dustin's decision, Oct 27, 2026)
+- **All new posts from Oct 29, 2026 on use the KJV only.** Posts through Oct 28 used NASB 1995; leave those as they are.
+- Never quote from memory. Look up every verse's exact KJV wording online (for example biblehub.com/<book>/<ch>-<v>.htm, the "King James Bible" line, or kingjamesbibleonline.org) before using it. Keep the KJV spelling and punctuation; drop the italics; LORD in caps where the KJV prints it.
 - Partial verse → mark it, e.g. `Isaiah 41:10a`.
-- Every verse graphic shows `(NASB)` in the reference. Every verse post caption ends with `Scripture: NASB · Lockman.org`.
-- Every verse post needs an **original caption longer than the verse** (reflection, encouragement, prayer or question).
-- Reels: include the line "Scripture quotations taken from the NASB (New American Standard Bible), Copyright © 1995 by The Lockman Foundation. Used by permission. All rights reserved. lockman.org" in the video.
+- Every verse graphic shows `(KJV)` in the reference, e.g. `ISAIAH 41:10a (KJV)`. Every verse post caption ends with `Scripture: KJV`.
+- Every verse post needs an **original caption longer than the verse** (reflection, encouragement, prayer or question). KJV wording is old-fashioned, so the caption can put the verse's meaning in plain words.
+- Reels: show `Scripture: King James Version (KJV)` as the small notice line (`reel.make(..., notice=reel.KJV_NOTICE)`). No Lockman notice on KJV reels.
+- The KJV is public domain in the US, so there is no verse limit and no Lockman credit for KJV posts.
 
-## Verse count (Lockman 1,000-verse limit)
-- Log every NASB verse posted in `verse-log.csv` (date, reference, number of verses, post time).
-- Count each **different** verse once toward the total. Reusing a verse already logged adds 0.
-- Show today's count and the running total at the top of every preview.
-- At **900+** total, flag it clearly at the top of the preview so Dustin can decide (ask Lockman, reuse posted verses, or switch new verses to KJV/WEB). At 1,000, stop adding new NASB verses until he decides.
+## Verse log
+- Log every verse posted in `verse-log.csv` (date, reference, number of verses, post time, version). Use it to keep verses varied and avoid repeating one too soon.
+- NASB history (Lockman 1,000-verse limit): 24 different NASB verses were posted Oct 24 – Oct 28, 2026. No new NASB verses are added after Oct 28, so the NASB count stays at 24 and no 900/1,000 warnings are needed. Don't reuse NASB wording; if a verse that was posted in NASB comes up again, quote it in KJV.
+- The preview summary shows the number of KJV verses in tomorrow's posts (no running 1,000 total needed).
 
 ## Daily mix at 8 posts/day (Oct 25 – Nov 7, 2026; Eastern time)
 Times are based on Metricool's best-time data for the Page (peaks around 10 AM–12 PM and 4–6 PM; weakest before 7 AM and after 9 PM).
@@ -60,12 +60,12 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AM�
 
 - For 8/day use the exact times in the 8-post table. For 12+/day (only after Dustin approves), spread posts between 7:00 AM and 10:00 PM, putting more of them in the peak windows (about 9 AM–1 PM and 3–7 PM) and fewer early or late; reels around 10 AM, 1 PM (when there are 3) and 8 PM; don't put two verse graphics back to back; keep humor in the evening.
 - Prayer prompt = a graphic or text post inviting people to share prayer requests or pray for something specific (no verse needed).
-- Keep about half of each day non-verse to avoid repetitive, mass-produced patterns and to slow the NASB verse count. Reusing popular verses already in verse-log.csv (with a new caption and design wording) adds 0 to the count; do this regularly at 16–20 posts/day.
+- Keep about half of each day non-verse to avoid repetitive, mass-produced patterns. Reusing popular verses already in verse-log.csv (with a new caption and design wording) is fine at 16–20 posts/day, as long as the same verse isn't used twice in one day or too close together.
 - Each week, include a one-line reach/engagement trend in the preview message (Metricool analytics), so Dustin can see how the ramp is landing.
 - Goal right now: reach new people who want faith content. Reels for discovery; captions built to be shared ("Share this with someone who…", "Tag a friend who…").
 
 ## Reels
-- Make with `tools/reel.py` → `make(scenes, ref, music, out)`: 1080x1920, 15 seconds, 2–3 scenes, verse text in yellow Lora on teal, white reference, "Love God." and the NASB notice built in.
+- Make with `tools/reel.py` → `make(scenes, ref, music, out, notice=KJV_NOTICE)`: 1080x1920, 15 seconds, 2–3 scenes, verse text in yellow Lora on teal, white reference, "Love God." and the KJV notice line.
 - Use explicit line breaks (`\n`) so lines break naturally; check frames so no single word sits alone on a line.
 - Music: rotate the original tracks in `tools/` (`music_morning_15s.wav` for morning reels; `music_night_15s.wav` for night reels; `music_hope_15s.wav` and `worship_bed_15s.wav` to vary). Never use copyrighted music.
 - Save as `media/YYYY-MM-DD/r1.mp4` (morning) and `r2.mp4` (night).
@@ -84,12 +84,12 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AM�
 
 ## Daily workflow (scheduled run at about 7:45 AM Eastern)
 1. Read this guide and `verse-log.csv`.
-2. Plan tomorrow's posts using the Volume plan (8/day unless Dustin has approved more); look up each verse's NASB 1995 wording.
+2. Plan tomorrow's posts using the Volume plan (8/day unless Dustin has approved more); look up each verse's KJV wording.
 3. Make the graphics with `tools/brand.py` and the two reels with `tools/reel.py`; save to `media/YYYY-MM-DD/` (tomorrow's date), e.g. `media/2026-10-26/p1.png`, `r1.mp4`, plus `r1.jpg`/`r2.jpg` poster frames.
 4. Commit and push to `main`. Image links: `https://raw.githubusercontent.com/onelifemediallc-sudo/lovegod-media/main/media/YYYY-MM-DD/pN.png`. Check each link returns 200.
-5. Publish the preview page (based on `tools/preview_template.html`) marked "Not scheduled yet: waiting for your OK", showing every post in time order with graphic, caption, time, tomorrow's verse count and the running total including tomorrow. Notify Dustin that it's ready and won't post until he confirms.
+5. Publish the preview page (based on `tools/preview_template.html`) marked "Not scheduled yet: waiting for your OK", showing every post in time order with graphic, caption, time, and the number of KJV verses in tomorrow's posts. Notify Dustin that it's ready and won't post until he confirms.
 6. **Wait for Dustin's approval.** Do not schedule anything before it.
-7. After approval: schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true; reels as `REEL` with the poster as `videoThumbnailUrl`) for tomorrow at its time. Then append the day's verses to `verse-log.csv`, commit and push, and confirm to Dustin.
+7. After approval: schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true; reels as `REEL` with the poster as `videoThumbnailUrl`) for tomorrow at its time. Then append the day's verses to `verse-log.csv` (version KJV), commit and push, and confirm to Dustin.
 8. If Dustin asks for changes after scheduling, update or delete those posts in Metricool (and the graphic/log) and confirm.
 
 ## Dustin's own reels
