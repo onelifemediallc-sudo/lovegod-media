@@ -76,7 +76,7 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AM�
 - No made-up statistics, no fake engagement numbers on graphics, no real people's names.
 
 ## Approval rule (Dustin's decision, Oct 26, 2026)
-- **Nothing goes to Metricool until Dustin confirms.** Each run builds tomorrow's posts and a preview, then waits for his reply.
+- **Nothing goes to Metricool until Dustin confirms, or until 10 PM Eastern that day passes with no reply (see below).** Each run builds tomorrow's posts and a preview, then waits for his reply.
 - Approval = a clear OK such as "post it", "approved" or "fine to post". Then schedule all posts and log the verses.
 - Changes requested → redo them, republish the preview, and ask again. "Cancel tomorrow" → schedule nothing.
 - **10 PM auto-post (Dustin's decision, Nov 3, 2026):** if Dustin hasn't approved, asked for changes, or cancelled by 10:00 PM Eastern on the day the preview goes out, schedule the posts as previewed at that point (same as an approval), log the verses, and notify him that they were auto-scheduled. If he asked for changes and hasn't confirmed the revised preview by 10 PM, auto-post the latest revised version. "Cancel tomorrow" always wins: nothing posts.
