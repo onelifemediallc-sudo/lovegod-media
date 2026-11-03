@@ -79,7 +79,8 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AMâ€
 - **Nothing goes to Metricool until Dustin confirms.** Each run builds tomorrow's posts and a preview, then waits for his reply.
 - Approval = a clear OK such as "post it", "approved" or "fine to post". Then schedule all posts and log the verses.
 - Changes requested â†’ redo them, republish the preview, and ask again. "Cancel tomorrow" â†’ schedule nothing.
-- No reply â†’ nothing posts that day, and those verses are not logged.
+- **10 PM auto-post (Dustin's decision, Nov 3, 2026):** if Dustin hasn't approved, asked for changes, or cancelled by 10:00 PM Eastern on the day the preview goes out, schedule the posts as previewed at that point (same as an approval), log the verses, and notify him that they were auto-scheduled. If he asked for changes and hasn't confirmed the revised preview by 10 PM, auto-post the latest revised version. "Cancel tomorrow" always wins: nothing posts.
+- The preview page and notification say: "Not scheduled yet: waiting for your OK. If no reply by 10 PM tonight, these will be scheduled automatically."
 - Reading Metricool analytics (Sunday trend, best times, Nov 23 report) is fine without approval.
 
 ## Daily workflow (scheduled run at about 7:45 AM Eastern)
@@ -88,7 +89,7 @@ Times are based on Metricool's best-time data for the Page (peaks around 10 AMâ€
 3. Make the graphics with `tools/brand.py` and the two reels with `tools/reel.py`; save to `media/YYYY-MM-DD/` (tomorrow's date), e.g. `media/2026-10-26/p1.png`, `r1.mp4`, plus `r1.jpg`/`r2.jpg` poster frames.
 4. Commit and push to `main`. Image links: `https://raw.githubusercontent.com/onelifemediallc-sudo/lovegod-media/main/media/YYYY-MM-DD/pN.png`. Check each link returns 200.
 5. Publish the preview page (based on `tools/preview_template.html`) marked "Not scheduled yet: waiting for your OK", showing every post in time order with graphic, caption, time, and the number of KJV verses in tomorrow's posts. Notify Dustin that it's ready and won't post until he confirms.
-6. **Wait for Dustin's approval.** Do not schedule anything before it.
+6. **Wait for Dustin's approval** until 10:00 PM Eastern that day. Do not schedule anything before approval or 10 PM, whichever comes first (see the 10 PM auto-post rule).
 7. After approval: schedule each post in Metricool (brand/blog id `7633380`, timezone `America/New_York`, network `facebook`, `facebookData.type` = `POST`, `autoPublish` true; reels as `REEL` with the poster as `videoThumbnailUrl`) for tomorrow at its time. Then append the day's verses to `verse-log.csv` (version KJV), commit and push, and confirm to Dustin.
 8. If Dustin asks for changes after scheduling, update or delete those posts in Metricool (and the graphic/log) and confirm.
 
