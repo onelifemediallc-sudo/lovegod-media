@@ -8,6 +8,18 @@ This is the rulebook for the daily posting run. Follow it exactly.
 - Owner: Dustin. Goal: earn from Facebook through reach and engagement.
 - Tone: warm, encouraging, broadly Christian (not tied to one denomination). Original writing only.
 
+## New verse-graphic look: paper style (Dustin's decision, Nov 17, 2026; starts Thu Nov 19)
+- Dustin chose a new look for **verse graphics**: light paper background (like a reference image he liked), with everything else in our colors: teal `#51B5A9` heading and corner graphics, deeper teal `#2A7F76` verse text (for readability), yellow `#F8E34C` highlight bars. Size 1080 x 1350 (4:5).
+- Make them with `tools/paper.py` → `card(ref, verse_lines, hi, tag, out, motif, layout, accent)`:
+  - `ref` = big heading, e.g. `PSALM 84:11a` (mark partial verses); the small line under it reads "KING JAMES VERSION".
+  - `verse_lines` = exact KJV wording with explicit line breaks; `hi` = index of the one key line to highlight in yellow.
+  - `tag` = 1–2 short lines of **original** encouragement on yellow bars (never copied from another page), e.g. "You won't go under. / He's in the water with you."
+  - "Love God." signature at the bottom.
+- **The corner graphics must be different every time (Dustin, Nov 17).** Always get them from `paper.pick()` (pass `exclude=[motifs already used that day]` for the 2nd/3rd card of a day). It reads `ornament-log.csv`, picks the least-recently-used of 15 motifs (waves, sun, wheat, cross, branch, moon, sparkles, mountains, heart, flower, anchor, book, rainbow, candle, crown), never one used in the last 8 paper cards, and alternates corner layout and color. Where it fits, you may choose a motif that matches the verse (e.g. waves for water, moon for night), as long as it isn't in the last 8.
+- After scheduling, log each paper card with `paper.log(date, post_time, ref, motif, layout, accent)` (appends to `ornament-log.csv`) and commit it with the verse log.
+- **Through Nov 23 (test):** 2 of the 3 daily verse graphics use the paper style and 1 stays solid teal (rotate which time slot stays teal). Note in the preview which posts are paper style. The Nov 23 evaluation compares paper vs teal verse graphics (reach, reactions, shares); then Dustin decides whether all verse graphics go paper style.
+- Engagement, humor and reels keep the solid-teal look below unless Dustin says otherwise.
+
 ## Brand look (every graphic)
 - Size: 1080 x 1080 PNG.
 - Background: solid teal `#51B5A9`. No gradient, no vignette, no pictures.
